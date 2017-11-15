@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VM_m.Data;
 
 namespace VM_management_st
 {
@@ -22,7 +23,31 @@ namespace VM_management_st
     {
         public MainWindow()
         {
+            Repository _repos = new Repository();
+
             InitializeComponent();
+            Terminals_ListBox.ItemsSource = _repos.Terminals;
+            Products_ListBox.ItemsSource = _repos.Products;
+        }
+
+        private void terminals_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void products_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void terminal_statistics_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void product_statistics_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
